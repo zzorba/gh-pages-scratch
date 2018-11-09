@@ -56,7 +56,7 @@ function parseRedirectQuery(query, replace) {
   if (typeof query.hash === 'string' && query.hash !== '') {
     redirectTo.hash = `#${query.hash}`
   }
-
+  console.log(redirectTo);
   replace(redirectTo)
 }
 ///////////////////////////////////////////////////////////////////////////////
@@ -76,6 +76,7 @@ const gitHubRepoName = 'gh-pages-scratch';
 // SET THIS: e.g. http://subdomain.example.tld, or http://www.example.tld
 const domain = 'https://zzorba.github.io';
 function redirectToDomain() {
+  console.log('Redirecting to domain');
   window.location.replace(domain + '/' + gitHubRepoName);
 }
 ///////////////////////////////////////////////////////////////////////////////
