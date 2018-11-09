@@ -56,7 +56,6 @@ function parseRedirectQuery(query, replace) {
   if (typeof query.hash === 'string' && query.hash !== '') {
     redirectTo.hash = `#${query.hash}`
   }
-  console.log(redirectTo);
   replace(redirectTo)
 }
 ///////////////////////////////////////////////////////////////////////////////
@@ -76,7 +75,6 @@ const gitHubRepoName = 'gh-pages-scratch';
 // SET THIS: e.g. http://subdomain.example.tld, or http://www.example.tld
 const domain = 'https://zzorba.github.io';
 function redirectToDomain() {
-  console.log('Redirecting to domain');
   window.location.replace(domain + '/' + gitHubRepoName);
 }
 ///////////////////////////////////////////////////////////////////////////////
@@ -84,7 +82,7 @@ function redirectToDomain() {
 
 const routes = (
   // onEnter hook checks if a redirect is needed before App component is loaded
-  <Route path="/" mapMenuTitle="Home" component={App} onEnter={checkForRedirect}>
+  <Route path={`${domain}/${gitHubReponame}`} mapMenuTitle="Home" component={App} onEnter={checkForRedirect}>
     <IndexRoute component={Home} />
 
     <Route path="example" mapMenuTitle="Example" component={ExampleComponent}>
