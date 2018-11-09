@@ -76,7 +76,7 @@ const gitHubRepoName = 'gh-pages-scratch';
 // SET THIS: e.g. http://subdomain.example.tld, or http://www.example.tld
 const domain = 'https://zzorba.github.io';
 function redirectToDomain() {
-  window.location.replace(domain);
+  window.location.replace(domain + '/' + gitHubRepoName);
 }
 ///////////////////////////////////////////////////////////////////////////////
 
