@@ -143,7 +143,7 @@
 	var gitHubRepoName = 'gh-pages-scratch';
 	// The domain for your site
 	// SET THIS: e.g. http://subdomain.example.tld, or http://www.example.tld
-	var domain = 'http://zzorba.github.io';
+	var domain = 'https://zzorba.github.io';
 	function redirectToDomain() {
 	  window.location.replace(domain);
 	}
